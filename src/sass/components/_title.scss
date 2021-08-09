@@ -1,0 +1,56 @@
+.title {
+  $this: &;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: $white;
+
+  &--l {
+    font-size: 48px;
+    letter-spacing: 1.3px;
+    @include p-black;
+
+    @include sm {
+      font-size: 30px;
+    }
+  }
+
+  &--m {
+    font-size: 32px;
+    @include p-xbold;
+
+    @include sm {
+      font-size: 22px;
+    }
+  }
+
+  &--blue {
+    color: $blue;
+  }
+
+  &--decor {
+    position: relative;
+    padding-top: 61px;
+
+    @include sm {
+      padding-top: 40px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 22px;
+      left: -3px;
+      width: 35px;
+      height: 10px;
+      background-color: $l-blue;
+      transform: rotate(-30deg) skew(-30deg);
+
+      @include sm {
+        top: 10px;
+        left: -1px;
+        width: 25px;
+        height: 8px;
+      }
+    }
+  }
+}

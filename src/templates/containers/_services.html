@@ -1,0 +1,21 @@
+<!-- BEGIN services -->
+<div class="services">
+  <div class="container">
+    <img class="services__bg-image" src="./img/service-bg.svg" alt="image">
+    <div class="services__content row">
+      <div class="col col-12">
+        <h2 class="title title--l title--decor services__title" data-aos="fade-up">SOMETHING <br/> AS A SERVICE</h2>
+      </div>
+    </div>
+      <div class="services__list row">
+        {% set cls = cycler("services__list-item--odd col-push-1 col-md-6 col-md-push-0 col-sm-12 col-sm-push-0", "services__list-item--even col-md-6 col-sm-12") %}
+        {% set aos = cycler("100", "200") %}
+        {% for item in service %}
+        <div class="services__list-item {{cls.next()}} col col-5" data-aos="fade-up" data-aos-delay="{{aos.next()}}">
+          {% include '../components/_service-item.html' %}
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+</div>
+<!-- END services -->

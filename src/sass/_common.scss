@@ -1,0 +1,12 @@
+body {
+	background-color: $white;
+	font-size: 18px;
+	line-height: 1.2;
+	color: $l-grey;
+	@include smooth-font;
+	@include p-light;
+}
+
+.out {
+	overflow: hidden;
+}

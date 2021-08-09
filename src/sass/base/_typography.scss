@@ -1,0 +1,43 @@
+@include font('Proxima-Nova-Light', 'ProximaNova-Light');
+@include font('Proxima-Nova-Reg', 'ProximaNova-Reg');
+@include font('Proxima-Nova-Bold', 'ProximaNova-Bold');
+@include font('Proxima-Nova-Xbold', 'ProximaNova-Xbold');
+@include font('Proxima-Nova-Black', 'ProximaNova-Black');
+
+
+@mixin p-light {
+  font-family: 'Proxima-Nova-Light', Arial, sans-serif;
+};
+
+@mixin p-reg {
+  font-family: 'Proxima-Nova-Reg', Arial, sans-serif;
+};
+
+@mixin p-bold {
+  font-family: 'Proxima-Nova-Bold', Arial, sans-serif;
+};
+
+@mixin p-xbold {
+  font-family: 'Proxima-Nova-Xbold', Arial, sans-serif;
+};
+
+@mixin p-black {
+  font-family: 'Proxima-Nova-Black', Arial, sans-serif;
+};
+
+
+.p-light {
+  @include p-light;
+}
+.p-reg {
+  @include p-reg;
+}
+.p-bold {
+  @include p-bold;
+}
+.p-black {
+  @include p-black;
+}
+.p-xbold {
+  @include p-xbold;
+}

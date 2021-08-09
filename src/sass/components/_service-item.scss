@@ -1,0 +1,43 @@
+.service-item {
+  &__icon {
+    margin-bottom: 17px;
+    font-size: 0;
+
+    @include sm {
+      margin-bottom: 12px;
+    }
+
+    svg {
+      width: 52px;
+      height: 52px;
+
+      @include sm {
+        width: 37px;
+        height: 37px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 42px;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: 0.7px;
+    color: $white;
+    @include p-bold;
+
+    @include sm {
+      margin-bottom: 27px;
+      font-size: 21px;
+    }
+  }
+
+  &__descr {
+    line-height: 1.55;
+
+    @include sm {
+      line-height: 1.35;
+      letter-spacing: -0.6px;
+    }
+  }
+}

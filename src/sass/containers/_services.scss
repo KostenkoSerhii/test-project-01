@@ -1,0 +1,71 @@
+.services {
+  position: relative;
+  padding-top: 128px;
+  padding-bottom: 240px;
+  overflow: hidden;
+  background-color: $bg-blue;
+  
+  @include sm {
+    padding-top: 86px;
+    padding-bottom: 194px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 108px;
+
+    @include sm {
+      margin-bottom: 42px;
+    }
+  }
+
+  &__list-item {
+    margin-bottom: 105px;
+    
+    @include sm {
+      margin-bottom: 44px;
+    }
+    
+    &--odd { 
+      padding-right: 60px;
+      
+      @include md {
+        padding-right: 30px;
+      }
+    }
+    
+    &--even {
+      padding-left: 48px;
+
+      @include md {
+        padding-left: 30px;
+      }
+    }
+
+    &--odd, &--even { 
+      @include sm {
+        padding: 0;
+      }
+    }
+  }
+
+  &__bg-image {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    width: 584px;
+    height: 682px;
+    opacity: 0.05;
+    pointer-events: none;
+
+    @include sm {
+      top: 135px;
+    }
+  }
+}

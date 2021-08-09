@@ -1,0 +1,53 @@
+.button {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  color: $blue;
+  font-size: 22px;
+  letter-spacing: 0.6px;
+  @include p-bold;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  @include sm {
+    font-size: 16px;
+  }
+
+  span, &::before {
+    display: flex;
+    justify-content: center;
+    padding: 26px 50px 23px;
+    transition: transform 0.3s;
+
+    @include sm {
+      padding: 18px 30px 16px;
+    }
+  }
+
+  span {
+    background: $yellow;
+  }
+
+  &::before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-25%);
+    background: $blue;
+    color: $yellow;
+  }
+
+  @include hover {
+    &::before{
+      transform: translateX(0%);
+    }
+
+    span {
+      transform: translateX(100%);
+    }
+  }
+}
